@@ -14,7 +14,7 @@ interface Question {
 const questions: Question[] = [
     { question: "hur ofta spelar bajen i Allsvenskan?",
     answer: "en gång i veckan",
-    help:""},
+    help:" 4 ggr i månaden är x gånger i veckan"},
     {question: "Vilka kommer vinna Allsvenskan 2025?",
         answer: "hammarby",
         help:"Kolla 2an i tabellen!"
@@ -36,9 +36,6 @@ const questions: Question[] = [
         help:"Bajen är alltid bäst i stan"
     }
 ]
-
-
-
 
 // Fråga användaren och returnera svaret som Promise<string>
 function ask(rl: readline.Interface, prompt: string): Promise<string> {
@@ -76,7 +73,7 @@ score = score + 2
    score = score - 1
  }
  console.log(response);
-}
+} 
 
 else if (typeof questions[i].answer ==  "boolean"){
  const answer = await ask(rl, questions[i].question + " hint: " + questions[i].help );
